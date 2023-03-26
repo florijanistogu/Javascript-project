@@ -1,0 +1,87 @@
+.produkti {
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  &:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .buy-now{
+    &:hover{
+      cursor: pointer;
+    color: red;
+    }
+  }
+}
+.navbar-brand{
+  font-weight: 500;
+  font-family: 'Alkatra', cursive;
+  &:hover{
+    color: red;
+    
+  }
+}
+.fav {
+  .heart {
+    &:hover {
+      color: red;
+    }
+  }
+}
+.fav {
+  .cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 470px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: 0.3s;
+    .cart-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .cart-content {
+      .cart-box {
+        display: grid;
+        grid-template-columns: 32% 50% 18%;
+        margin-top: 20px;
+        .cart-img {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+          padding: 10px;
+        }
+        .detail-box {
+          display: grid;
+          row-gap: 5px;
+          .cart-product-title {
+            font-size: 1rem;
+            text-transform: uppercase;
+          }
+          .cart-quantity {
+            border: 1px solid black;
+            outline-color: black;
+            width: 2.4rem;
+            text-align: center;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    #close-cart {
+      position: absolute;
+      top: 1rem;
+      right: 0.8rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    &.active {
+      right: 0;
+    }
+  }
+}
